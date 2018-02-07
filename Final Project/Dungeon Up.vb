@@ -591,4 +591,8 @@
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles obsticle17.Click
 
     End Sub
+
+    Private Sub down_Click(sender As Object, e As EventArgs) Handles down.Click
+
+    End Sub
 End Class
