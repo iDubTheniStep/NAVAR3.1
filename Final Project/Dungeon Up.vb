@@ -578,11 +578,6 @@
     End Function
 
 
-
-    Private Sub FireMid2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Dungeon_Up_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbHealth.Value = PlayerStats.numHealth
         Timer4.Interval = 500
@@ -590,13 +585,6 @@
     End Sub
 
 
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles obsticle17.Click
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles TrickPic.Click
-
-    End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         Static s1 As Boolean

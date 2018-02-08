@@ -456,7 +456,7 @@
         If testcollision(bomb8, playerRight) Then
             PlayerStats.numHealth = PlayerStats.numHealth - 5
         End If
-        pbHealth.Value = PlayerStats.numHealth
+1:      pbHealth.Value = PlayerStats.numHealth
         If testcollision(bomb10, playerRight) Then
             PlayerStats.numHealth = PlayerStats.numHealth - 5
         End If
