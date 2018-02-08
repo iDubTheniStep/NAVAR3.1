@@ -578,21 +578,31 @@
     End Function
 
 
-
-    Private Sub FireMid2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Dungeon_Up_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbHealth.Value = PlayerStats.numHealth
+        Timer4.Interval = 500
+        Timer4.Enabled = True
     End Sub
 
 
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles obsticle17.Click
 
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        Static s1 As Boolean
+        Static i As Long
+        i = i + 1
+        If i < 120 Then
+            s1 = Not s1
+            If s1 Then
+                TrickPic.BackColor = Color.White
+                TrickPic.ForeColor = Color.Coral
+            Else
+                TrickPic.BackColor = Color.Black
+                TrickPic.ForeColor = Color.Beige
+            End If
+        Else
+            Timer4.Enabled = False
+            i = 0
+        End If
     End Sub
 
-    Private Sub down_Click(sender As Object, e As EventArgs) Handles down.Click
-
-    End Sub
 End Class

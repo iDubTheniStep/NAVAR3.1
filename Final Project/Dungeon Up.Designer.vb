@@ -68,6 +68,8 @@ Partial Class Dungeon_Up
         Me.FireTop2 = New System.Windows.Forms.PictureBox()
         Me.FireMD = New System.Windows.Forms.PictureBox()
         Me.FireMT = New System.Windows.Forms.PictureBox()
+        Me.TrickPic = New System.Windows.Forms.PictureBox()
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.playerLeft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerDown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerRight, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +110,7 @@ Partial Class Dungeon_Up
         CType(Me.FireTop2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FireMD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FireMT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrickPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'playerLeft
@@ -535,11 +538,24 @@ Partial Class Dungeon_Up
         Me.FireMT.TabIndex = 94
         Me.FireMT.TabStop = False
         '
+        'TrickPic
+        '
+        Me.TrickPic.Image = CType(resources.GetObject("TrickPic.Image"), System.Drawing.Image)
+        Me.TrickPic.Location = New System.Drawing.Point(825, 242)
+        Me.TrickPic.Name = "TrickPic"
+        Me.TrickPic.Size = New System.Drawing.Size(113, 62)
+        Me.TrickPic.TabIndex = 95
+        Me.TrickPic.TabStop = False
+        '
+        'Timer4
+        '
+        '
         'Dungeon_Up
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1244, 739)
+        Me.Controls.Add(Me.TrickPic)
         Me.Controls.Add(Me.drag)
         Me.Controls.Add(Me.FireMT)
         Me.Controls.Add(Me.FireMD)
@@ -625,6 +641,7 @@ Partial Class Dungeon_Up
         CType(Me.FireTop2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FireMD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FireMT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrickPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -672,4 +689,6 @@ Partial Class Dungeon_Up
     Friend WithEvents FireTop2 As System.Windows.Forms.PictureBox
     Friend WithEvents FireMD As System.Windows.Forms.PictureBox
     Friend WithEvents FireMT As System.Windows.Forms.PictureBox
+    Friend WithEvents TrickPic As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer4 As System.Windows.Forms.Timer
 End Class
