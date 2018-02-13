@@ -1,13 +1,10 @@
 ﻿Public Class death
 
-
-
-    Private Sub btnRestart_Click(sender As Object, e As EventArgs) Handles btnRestart.Click
-
+    Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
+        Me.Close()
     End Sub
 
-    Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
+    Private Sub btnMainMenu_Click(sender As Object, e As EventArgs) Handles btnMainMenu.Click
 
-        Me.Close()
     End Sub
 End Class

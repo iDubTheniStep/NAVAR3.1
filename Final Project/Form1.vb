@@ -309,6 +309,7 @@
     Private Function testcollision(pictureBox As PictureBox, dungeon_Up As Dungeon_Up) As Boolean
         Throw New NotImplementedException
     End Function
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         pbHealth.Value = PlayerStats.numHealth
         If testcollision(picMonster2, playerDown) Then
@@ -478,10 +479,10 @@
         ElseIf picMonster2.Location.X < 918 Then
             picMonster2.Left += 500
         End If
-        If picHitBox6.Location.X > 335 Then
-            picHitBox6.Left -= 50
-        ElseIf picHitBox6.Location.X < 918 Then
-            picHitBox6.Left += 500
+        If picHitbox6.Location.X > 335 Then
+            picHitbox6.Left -= 50
+        ElseIf picHitbox6.Location.X < 918 Then
+            picHitbox6.Left += 500
         End If
     End Sub
     Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
