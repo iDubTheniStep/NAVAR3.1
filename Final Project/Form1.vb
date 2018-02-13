@@ -302,6 +302,8 @@
     End Function
     Private Sub Dungeon_1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbHealth.Value = PlayerStats.numHealth
+        Timer7.Interval = 500
+        Timer7.Enabled = True
     End Sub
     Private Function testcollision(pictureBox As PictureBox, dungeon_Up As Dungeon_Up) As Boolean
         Throw New NotImplementedException
@@ -504,5 +506,28 @@
     End Sub
     Private Sub picMonster4_Click(sender As Object, e As EventArgs) Handles picMonster4.Click
         Mon4kill = 1
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PicHelpMe.Click
+
+    End Sub
+
+    Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
+        Static s1 As Boolean
+        Static i As Long
+        i = i + 1
+        If i < 120 Then
+            s1 = Not s1
+            If s1 Then
+                PicHelpMe.BackColor = Color.White
+                PicHelpMe.ForeColor = Color.Coral
+            Else
+                PicHelpMe.BackColor = Color.Black
+                PicHelpMe.ForeColor = Color.Beige
+            End If
+        Else
+            Timer7.Enabled = False
+            i = 0
+        End If
     End Sub
 End Class

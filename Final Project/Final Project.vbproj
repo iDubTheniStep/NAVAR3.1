@@ -198,6 +198,15 @@
   <ItemGroup>
     <None Include="Resources\hated.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hgbhgb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trickedyou.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -540,10 +540,12 @@ Partial Class Dungeon_Up
         '
         'TrickPic
         '
-        Me.TrickPic.Image = CType(resources.GetObject("TrickPic.Image"), System.Drawing.Image)
-        Me.TrickPic.Location = New System.Drawing.Point(825, 242)
+        Me.TrickPic.BackColor = System.Drawing.SystemColors.Window
+        Me.TrickPic.Image = Global.Final_Project.My.Resources.Resources.trickedyou
+        Me.TrickPic.Location = New System.Drawing.Point(859, 183)
         Me.TrickPic.Name = "TrickPic"
-        Me.TrickPic.Size = New System.Drawing.Size(113, 62)
+        Me.TrickPic.Size = New System.Drawing.Size(57, 42)
+        Me.TrickPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.TrickPic.TabIndex = 95
         Me.TrickPic.TabStop = False
         '
