@@ -279,19 +279,20 @@
             Dungeon_Up.ShowDialog()
         End If
         BossRoom.Visible = False
+
         If testcollision(playerDown, BossRoom) = True Then
             Final_Boss.ShowDialog()
         End If
-        'If testcollision(playerDown, obsKey) = True Then
-        '    playerUp.Top = prevj
-        '    playerUp.Left = prevu
-        '    playerRight.Top = prevr
-        '    playerRight.Left = prevt
-        '    playerLeft.Top = prevy
-        '    playerLeft.Left = prevx
-        '    playerDown.Top = prevw
-        '    playerDown.Left = preve
-        'End If
+        If testcollision(playerDown, obsKey) = True Then
+            playerUp.Top = prevj
+            playerUp.Left = prevu
+            playerRight.Top = prevr
+            playerRight.Left = prevt
+            playerLeft.Top = prevy
+            playerLeft.Left = prevx
+            playerDown.Top = prevw
+            playerDown.Left = preve
+        End If
 
     End Sub
     Function testcollision(ByRef pic1 As PictureBox, ByVal pic2 As PictureBox) As Boolean ' Collision function
@@ -302,6 +303,8 @@
     End Function
     Private Sub Dungeon_1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbHealth.Value = PlayerStats.numHealth
+        Timer7.Interval = 500
+        Timer7.Enabled = True
     End Sub
     Private Function testcollision(pictureBox As PictureBox, dungeon_Up As Dungeon_Up) As Boolean
         Throw New NotImplementedException
@@ -505,5 +508,28 @@
     End Sub
     Private Sub picMonster4_Click(sender As Object, e As EventArgs) Handles picMonster4.Click
         Mon4kill = 1
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PicHelpMe.Click
+
+    End Sub
+
+    Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
+        Static s1 As Boolean
+        Static i As Long
+        i = i + 1
+        If i < 120 Then
+            s1 = Not s1
+            If s1 Then
+                PicHelpMe.BackColor = Color.White
+                PicHelpMe.ForeColor = Color.Coral
+            Else
+                PicHelpMe.BackColor = Color.Black
+                PicHelpMe.ForeColor = Color.Beige
+            End If
+        Else
+            Timer7.Enabled = False
+            i = 0
+        End If
     End Sub
 End Class
