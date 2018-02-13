@@ -279,19 +279,20 @@
             Dungeon_Up.ShowDialog()
         End If
         BossRoom.Visible = False
+
         If testcollision(playerDown, BossRoom) = True Then
             Final_Boss.ShowDialog()
         End If
-        'If testcollision(playerDown, obsKey) = True Then
-        '    playerUp.Top = prevj
-        '    playerUp.Left = prevu
-        '    playerRight.Top = prevr
-        '    playerRight.Left = prevt
-        '    playerLeft.Top = prevy
-        '    playerLeft.Left = prevx
-        '    playerDown.Top = prevw
-        '    playerDown.Left = preve
-        'End If
+        If testcollision(playerDown, obsKey) = True Then
+            playerUp.Top = prevj
+            playerUp.Left = prevu
+            playerRight.Top = prevr
+            playerRight.Left = prevt
+            playerLeft.Top = prevy
+            playerLeft.Left = prevx
+            playerDown.Top = prevw
+            playerDown.Left = preve
+        End If
 
     End Sub
     Function testcollision(ByRef pic1 As PictureBox, ByVal pic2 As PictureBox) As Boolean ' Collision function
